@@ -266,6 +266,11 @@ public class TranslatorBlockFactory
 			return new WireIsReadBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		
+		if (blockName.equals("ise_ir"))
+		{
+			return new PinReadAnalogBlock(blockId, translator, codePrefix,
+					codeSuffix, label);
+		}
 		
 		System.err.println(blockName + " not found!");
 		
